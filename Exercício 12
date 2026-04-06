@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class Exercicio12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite o primeiro número: ");
+        int a = sc.nextInt();
+
+        System.out.print("Digite o segundo número: ");
+        int b = sc.nextInt();
+
+        System.out.print("Digite o terceiro número: ");
+        int c = sc.nextInt();
+
+        int maior, meio, menor;
+
+        if (a >= b && a >= c) {
+            maior = a;
+            if (b >= c) {
+                meio = b;
+                menor = c;
+            } else {
+                meio = c;
+                menor = b;
+            }
+        } else if (b >= a && b >= c) {
+            maior = b;
+            if (a >= c) {
+                meio = a;
+                menor = c;
+            } else {
+                meio = c;
+                menor = a;
+            }
+        } else {
+            maior = c;
+            if (a >= b) {
+                meio = a;
+                menor = b;
+            } else {
+                meio = b;
+                menor = a;
+            }
+        }
+
+        System.out.println("Ordem decrescente: " + maior + ", " + meio + ", " + menor);
+
+        sc.close();
+    }
+}
